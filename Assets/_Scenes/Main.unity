@@ -267,7 +267,7 @@ MonoBehaviour:
     zMax: 8
   bolt: {fileID: 1366700374870168, guid: 7aa8c072066424c42951148da87828c0, type: 2}
   shotSpawn: {fileID: 1585817912}
-  fireRate: 0.5
+  fireRate: 0.25
 --- !u!54 &153624066
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -392,6 +392,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 1077570081684404, guid: 8d7a43baae7e343449da7cd4a2a34f32, type: 2}
   spawnValues: {x: 6, y: 0, z: 16}
+  hazardCount: 10
+  spawnWait: 0.5
+  startWait: 1
+  waveWait: 4
 --- !u!1 &1056419200
 GameObject:
   m_ObjectHideFlags: 0
