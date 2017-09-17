@@ -16,9 +16,23 @@ public class PlayerController : MonoBehaviour {
 	public float tilt;
 	public Boundary boundary;
 
+	public GameObject bolt;
+	public Transform shotSpawn; //avoids having to type shotSpawn.transform.position/rotation; Unity will recognize transform of the GameObject
+	public float fireRate = 0.5f;
+
+	private float nextFire = 0.0f;
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
+	}
+
+	void Update()
+	{
+		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate (bolt, shotSpawn.position, shotSpawn.rotation);
+		}
 	}
 
 	void FixedUpdate()
