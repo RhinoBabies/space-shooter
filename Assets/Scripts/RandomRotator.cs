@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomRotator : MonoBehaviour {
+public class RandomRotator : MonoBehaviour
+{
 	public float tumble; //maximum tumble value set in editor
 
 	private Rigidbody rb;
